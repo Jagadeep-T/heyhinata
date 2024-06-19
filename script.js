@@ -281,28 +281,32 @@ window.requestAnimFrame = function () {
   };
   
   function reveal() {
+    // Make the background of the 'merrywrap' element transparent
     document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
-  
+    
+    // Assuming loop() is a function you need to call here
     loop();
-  
+    
+    // Determine the width and height based on the window width
     var w, h;
     if (window.innerWidth >= 1000) {
-      w = 295;h = 185;
-    } else
-    {
-      w = 255;h = 155;
+        w = 295; h = 185;
+    } else {
+        w = 255; h = 155;
     }
-  
-    var video = document.createElement("video");
-video.setAttribute("src", "C:/Users/jagad/Downloads/IMG_0120.mov");
-video.setAttribute("controls", "controls");
-video.setAttribute("loop", "loop");
-video.setAttribute("autoplay", "autoplay");
-video.style.width = `${w}px`;
-video.style.height = `${h}px`;
-document.querySelector('#video').appendChild(video);
+    
+    // Create an image element
+    var img = document.createElement("img");
+    // Set the source of the image to your desired file path
+    img.setAttribute("src", "C:/Users/jagad/Downloads/your_image.jpg"); // Update with your image path
+    // Set the width and height of the image
+    img.style.width = `${w}px`;
+    img.style.height = `${h}px`;
+    
+    // Append the image to the 'video' div (you might want to rename this div to something more appropriate)
+    document.querySelector('#video').appendChild(img);
+}
 
-  }
   
   
   
