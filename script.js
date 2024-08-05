@@ -298,7 +298,7 @@ window.requestAnimFrame = function () {
     // Create an image element
     var img = document.createElement("img");
     // Set the source of the image to your desired file path
-    img.setAttribute("src", "J.png"); // Update with your image path
+    img.setAttribute("src", "j2.png"); // Update with your image path
     // Set the width and height of the image
     img.style.width = `${w}px`;
     img.style.height = `${h}px`;
